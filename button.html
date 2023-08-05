@@ -51,6 +51,12 @@
       margin: 10px;
     }
 
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+
+    }
+
     .my-color {
       background-color: var(--my-color);
     }
@@ -243,12 +249,31 @@
 </head>
 
 <body>
-  <div>
-  <button id="Rune" class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-gear"></i> Rune Builder</button>
-  </div>
 
-  <div>
-  <button id="Dungeons" class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-dungeon"></i> Dungeons Drops</button>
+  <div class="wrapper">
+    <div>
+    <button id="Rune" class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-gear"></i> Rune Builder</button>
+    </div>
+  
+    <div>
+    <button id="Dungeons" class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-dungeon"></i> Dungeons Drops</button>
+    </div>
+  
+    <div>
+    <button id="Guild" class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-dungeon"></i> Guild Tools</button>
+    </div>
+  
+    <div>
+    <button id="Optimizer" class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-dungeon"></i> Optimizer</button>
+    </div>
+  
+    <div>
+    <button id="Inudef" class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-dungeon"></i> Inugami Def</button>
+    </div>
+  
+    <div>
+    <button id="bj5" class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-dungeon"></i> BJ5 Team</button>
+    </div>
   </div>
   
   <script>
@@ -258,6 +283,22 @@
         
       else if (id === "Dungeons") {
         window.open("https://swarfarm.com/", '_blank').focus();
+      }
+
+      else if (id === "Guild") {
+        window.open("https://swgt.io/", '_blank').focus();
+      }
+
+      else if (id === "Optimizer") {
+        window.open("https://tool.swop.one/", '_blank').focus();
+      }
+
+      else if (id === "Inudef") {
+        window.open("https://preview.redd.it/p22e704rpvs61.jpg?width=2478&format=pjpg&auto=webp&v=enabled&s=1e8599c699d06db60d28d1e9c080b40a670506f4", '_blank').focus();
+      }
+
+      else if (id === "bj5") {
+        window.open("https://www.facebook.com/MEEGamerTH/posts/pfbid022ac3e6w22SjyjJQKe2Eanjd4xgzdRfgBryiR68SCF6SSHHJ5DehiKMpzW3c24hiul", '_blank').focus();
       }
     }
   </script>
