@@ -244,11 +244,20 @@
 
 <body>
 
-  <button class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-gear"></i> Rune Builder</button>
+  <button id="Rune" class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-gear"></i> Rune Builder</button>
+
+  <button id="Dungeons" class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-dungeon"></i> Dungeons Drops</button>
   
   <script>
-    function navigate() {
-      window.open("https://swrunebuilder.com/home", '_blank').focus();
+    function navigate(id) {
+      if (id === "Rune")
+        window.open("https://swrunebuilder.com/home", '_blank').focus();
+        
+      else if (id === "Dungeons") {
+        window.open("https://swarfarm.com/", '_blank').focus();
+      }
+
+      
     }
   </script>
 
