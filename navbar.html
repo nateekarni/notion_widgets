@@ -53,31 +53,6 @@
 
 			color: #d09c0b;
 		}
-
-		.material-icons {
-			font-family: 'Material Icons';
-			font-weight: normal;
-			font-style: normal;
-			font-size: 24px;  /* Preferred icon size */
-			display: inline-block;
-			line-height: 1;
-			text-transform: none;
-			letter-spacing: normal;
-			word-wrap: normal;
-			white-space: nowrap;
-			direction: ltr;
-			
-			/* Support for all WebKit browsers. */
-			-webkit-font-smoothing: antialiased;
-			/* Support for Safari and Chrome. */
-			text-rendering: optimizeLegibility;
-			
-			/* Support for Firefox. */
-			-moz-osx-font-smoothing: grayscale;
-			
-			/* Support for IE. */
-			font-feature-settings: 'liga';
-			}
 	</style>
 </head>
 
@@ -91,9 +66,8 @@
     <a id="projects" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bars-progress"></i> Projects</a>
     <a id="shopping-list" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-basket-shopping"></i> Shopping List</a>
     <a id="anime-manga" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bars-progress"></i> Movie/Anime/Manga</a>
-    <a id="books" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bars-progress"></i> Library</a>
-    <a id="smw" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bars-progress"></i> Summoners War</a>
-    <a id="smw" onclick="navigate(this.id)" href="#"> <span class="material-icons"> self_improvement</span> Summoners War</a>
+    <a id="books" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Library</a>
+    <a id="smw" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-gamepad"></i> Summoners War</a>
 
 
 
@@ -120,6 +94,14 @@
         window.open("https://www.notion.so/Work-Application-30c31ffbaee242df9a7e9ca113f75ac5", '_blank').focus();
 			else if (id == "projects")
         window.open("https://www.notion.so/Projects-f11e23d94ffe4857aef42abb822c5b5c", '_blank').focus();
+			else if (id == "shopping-list")
+        window.open("https://www.notion.so/Wishlist-1d5e85b9f3c943d6a8694283cfff245e", '_blank').focus();
+			else if (id == "anime-manga")
+        window.open("https://www.notion.so/0167a75720c441a88f25acd00360fe4c?v=18962e2f96e045d983cdb11f5f2edaaa", '_blank').focus();
+			else if (id == "books")
+        window.open("https://www.notion.so/1c7230ebaaa44d5694b2dc6b9dacc64a", '_blank').focus();
+			else if (id == "smw")
+        window.open("https://www.notion.so/Summoners-War-e1d25db3f82b4de99b4bc5534869395b", '_blank').focus();
 		}
 	</script>
 
