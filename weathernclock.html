@@ -32,7 +32,7 @@
     }
 
     .clock{
-      font-size: 30px;
+      font-size: 50px;
     }
 
     .date .location{
@@ -88,8 +88,7 @@
       </div>
     </div>
 
-    
-      
+    <!-- Weather Report -->
     <div class="weather">
       <div class="status">
         <center><img src="/Clock and Weather/clear-sky.png" class="icon"></center>
@@ -101,10 +100,15 @@
         <center><h4>Temperature</h4></center>
         <center><span class="value" id="temp">25.4 °C</span></center>
       </div>
-      <div class="raining">
-        <center><img src="/Clock and Weather/rainy.png" class="icon"></center>
-        <center><h4>Rainy Chance</h4></center>
-        <center><span class="value" id="rain-percen">60%</span></center>
+      <div class="wind">
+        <center><img src="/Clock and Weather/wind.png" class="icon"></center>
+        <center><h4>Wind Speed</h4></center>
+        <center><span class="value" id="windspeed">00 lm/hr</span></center>
+      </div>
+      <div class="humidity">
+        <center><img src="/Clock and Weather/humidity.png" class="icon"></center>
+        <center><h4>Humidity</h4></center>
+        <center><span class="value" id="humidity">60%</span></center>
       </div>
     </div>
 
@@ -118,14 +122,27 @@
       let dnum = document.getElementById("date");
       let mm = document.getElementById("month");
       let yy = document.getElementById("year");
+      let local = document.getElementById("locate");
+      let weather = document.getElementById("status");
+      let temperature = document.getElementById("temp");
 
       let month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
       let weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
       
       setInterval(() => {
         let currentTime = new Date();
-        hrs.innerHTML = currentTime.getHours();
-        min.innerHTML = currentTime.getMinutes();
+        if (currentTime.getHours() < 10) {
+          hrs.innerHTML = "0" + currentTime.getHours();
+        }
+        else {
+          hrs.innerHTML = currentTime.getHours();
+        }
+        if (currentTime.getMinutes() < 10) {
+          min.innerHTML = "0" + currentTime.getMinutes();
+        }
+        else {
+          min.innerHTML = currentTime.getMinutes();
+        }
         dd.innerHTML = weekday[currentTime.getDay()];
         dnum.innerHTML = currentTime.getDate();
         mm.innerHTML = month[currentTime.getMonth()];
