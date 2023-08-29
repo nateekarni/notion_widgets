@@ -92,7 +92,7 @@
     <!-- Weather Report -->
     <div class="weather">
       <div class="status">
-        <center><img src="/notion_widgets/weather_clock/clear-sky.png" class="icon"></center>
+        <center><img src="/notion_widgets/weather_clock/clear-sky.png" id="statuspic" class="icon"></center>
         <center><h4>Weather</h4></center>
         <center><span class="value" id="weather_status">Partly Cloud</span></center>
       </div>
@@ -177,6 +177,15 @@
         console.log(data);
         locate.innerHTML = data.name + ", " + data.sys.country;
         temp.innerHTML = Math.round((data.main.temp-32)/9*100)/100 + "°C";
+        if (data.weather[0].main = "Clouds") {
+          document.getElementById("statuspic").src = "/notion_widgets/weather_clock/cloud.png"
+        }
+        else if (data.weather[0].main = "Clear") {
+          document.getElementById("statuspic").src = "/notion_widgets/weather_clock/sunny.png"
+        }
+        else if (data.weather[0].main = "Rain") {
+        document.getElementById("statuspic").src = "/notion_widgets/weather_clock/rainy.png"
+        }
         weather_status.innerHTML = data.weather[0].main;
         windspeed.innerHTML = data.wind.speed + " km/hr";
         humidity.innerHTML = Math.round((data.main.humidity)*100)/100 + "%";
