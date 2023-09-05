@@ -192,8 +192,10 @@
         humidity.innerHTML = Math.round((data.main.humidity)*100)/100 + "%";
       })
     }
-
-    getLocation();
+    
+    setInterval(() => {
+      getLocation();
+      }, 3600000);
 
     </script>
     
