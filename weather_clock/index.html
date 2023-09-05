@@ -159,6 +159,7 @@
           navigator.geolocation.getCurrentPosition(showPosition);
         } else {
             alert("Geolocation is not supported by this browser.");
+            navigator.geolocation.getCurrentPosition(showPosition);
         }
       }
 
